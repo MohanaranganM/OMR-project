@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="13" time="557.897">
+<testcase classname="Verfying Adactin Hotel Login Details" name="Verifying Adactin Hotel Login Valid" time="16.424">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+]]></system-out>
+</testcase>
+<testcase classname="Verfying Adactin Hotel Login Details" name="Verifying Adactin Hotel Enter Key" time="9.184">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User should Perform Login "Akilan1008" and "Iphone@11promax" with Enter Key.passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+]]></system-out>
+</testcase>
+<testcase classname="Verfying Adactin Hotel Login Details" name="Verifying Adactin Hotel Invalid Credentials" time="17.182">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan" and "Iphone"........................passed
+Then User should Verify Login with Invalid Login Credential and Error Message contains "Invalid Login details".passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying the Adactin Search Hotel Details" name="Verifying the Search Valid Hotel Room" time="16.552">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+And User should Search the Hotel Details "Melbourne","Hotel Creek","Double","2 - Two","14/12/2022","15/12/2022","2 - Two" and "1 - One".passed
+Then User should verify After Search Hotel Get the Success Message "Select Hotel".passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying the Adactin Search Hotel Details" name="Verifying the Valid Hotel Room with Mandatory Fields" time="21.309">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+And User should Entry Mandatory Details "Melbourne","2 - Two","14/12/2022","15/12/2022" and "2 - Two".passed
+Then User should verify After Search Hotel Get the Success Message "Select Hotel".passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying the Adactin Search Hotel Details" name="Verifying the Search hotel with Invalid Check-IN and Check-OUT Dates" time="30.866">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+And User should Search the Hotel Details "Melbourne","Hotel Creek","Double","2 - Two","15/12/2025","14/12/2022","2 - Two" and "1 - One".passed
+Then User should verify After Search Hotel Get the Error Message "Check-In Date shall be before than Check-Out Date" and "Check-Out Date shall be after than Check-In Date".passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying the Adactin Search Hotel Details" name="Verifying the Search hotel without entry fields" time="91.43">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+And User should select search button........................................passed
+Then User should verify After Search Hotel Get the Error message "Please Select a Location".passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying the Select Adactin Hotel Room" name="Verifying the Select Hotel Room" time="48.92">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+And User should Search the Hotel Details "Melbourne","Hotel Sunshine","Double","2 - Two","14/12/2022","15/12/2022","2 - Two" and "1 - One".passed
+Then User should verify After Search Hotel Get the Success Message "Select Hotel".passed
+And User Should perform select hotel........................................passed
+Then User Should Verify After Select Hotel Success Message "Book A Hotel"...passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying the Select Adactin Hotel Room" name="Verifying the Select Hotel Without any Fields" time="20.7">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+And User should Search the Hotel Details "Melbourne","Hotel Sunshine","Double","2 - Two","14/12/2022","15/12/2022","2 - Two" and "1 - One".passed
+Then User should verify After Search Hotel Get the Success Message "Select Hotel".passed
+And User Should perform  without selecting hotel field......................passed
+Then User should Verify After selecting hotel error Message "Please Select a Hotel".passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying the Adactin Book Hotel Details" name="Verifying the Book Hotel with Entering Valid Details" time="75.676">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+And User should Search the Hotel Details "Melbourne","Hotel Sunshine","Double","2 - Two","21/01/2023","22/01/2023","2 - Two" and "1 - One".passed
+Then User should verify After Search Hotel Get the Success Message "Select Hotel".passed
+And User Should perform select hotel........................................passed
+Then User Should Verify After Select Hotel Success Message "Book A Hotel"...passed
+And User Should Book the Hotel "Akilan","Arumugam" and "Chennai"............passed
+Then User Should Verify After Book the Hotel Get Success Message "Booking Confirmation" and Save the Generated OrderId.passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying the Adactin Book Hotel Details" name="Verifying the Book Hotel without Entering any Fields" time="47.761">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+And User should Search the Hotel Details "Melbourne","Hotel Sunshine","Double","2 - Two","14/12/2022","15/12/2022","2 - Two" and "1 - One".passed
+Then User should verify After Search Hotel Get the Success Message "Select Hotel".passed
+And User Should perform select hotel........................................passed
+Then User Should Verify After Select Hotel Success Message "Book A Hotel"...passed
+And User Should Select the Book Now button without Entering any Fields......passed
+Then User Should Verify Error Message "Please Enter your First Name","Please Enter you Last Name","Please Enter your Address","Please Enter your 16 Digit Credit Card Number","Please Select your Credit Card Type","Please Select your Credit Card Expiry Month" and "Please Enter your Credit Card CVV Number".passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying the Adactin Hotel Cancel Order ID" name="Verifying to Cancel the Generated Order Id" time="58.784">
+<system-out><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....passed
+And User should Search the Hotel Details "Melbourne","Hotel Sunshine","Double","2 - Two","14/12/2022","15/12/2022","2 - Two" and "1 - One".passed
+Then User should verify After Search Hotel Get the Success Message "Select Hotel".passed
+And User Should perform select hotel........................................passed
+Then User Should Verify After Select Hotel Success Message "Book A Hotel"...passed
+And User Should Book the Hotel "Akilan","Arumugam" and "Chennai"............passed
+Then User Should Verify After Book the Hotel Get Success Message "Booking Confirmation" and Save the Generated OrderId.passed
+And User Should Cancel the Generated Order Id...............................passed
+Then User Should Verify After Cancel Order Id Get success Message "The booking has been cancelled.".passed
+]]></system-out>
+</testcase>
+<testcase classname="Verifying the Adactin Hotel Cancel Order ID" name="Verifying to Cancel Existing the Order Id" time="102.558">
+<failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#username_show&quot;}&#10;  (Session info: chrome=109.0.5414.75)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.7.2', revision: '4d4020c3b7'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [283fce43543b6f5b74c2318c030435d5, findElement {using=id, value=username_show}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\AKILAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51451}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51451/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 283fce43543b6f5b74c2318c030435d5" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given User is on the Adactin Page...........................................passed
+When User Should Perform Login "Akilan1008" and "Iphone@11promax"...........passed
+Then User Should Verify After Login Success Message "Hello Akilan1008!".....failed
+And User Should Cancel the Existing Order Id "785B2W5334"...................skipped
+Then User Should Verify After Cancel Order Id Get success Message "The booking has been cancelled.".skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#username_show"}
+  (Session info: chrome=109.0.5414.75)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [283fce43543b6f5b74c2318c030435d5, findElement {using=id, value=username_show}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.75, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\AKILAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51451}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51451/devtoo..., se:cdpVersion: 109.0.5414.75, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 283fce43543b6f5b74c2318c030435d5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:535)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:343)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy19.getAttribute(Unknown Source)
+	at com.base.BaseClass2.getAttribute(BaseClass2.java:124)
+	at com.stepDefin.CommenStep.userShouldVerifyAfterLoginSuccessMessage(CommenStep.java:37)
+	at ✽.User Should Verify After Login Success Message "Hello Akilan1008!"(file:///C:/Users/AKILAN%20ARUMUGAM/eclipse-workspace/OMRBranchAutomation/src/test/resources/Feature/TC5_CancelBooking.feature:29)
+]]></failure>
+</testcase>
+</testsuite>
